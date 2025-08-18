@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zero Peak Tech (ZPT) — Energy, Analytics, and AI</title>
+  <meta name="description" content="Zero Peak Tech helps organizations meet Building Performance Standards with energy analytics, anomaly detection, automated reporting, and an AI assistant named ZERO." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23005f99"/><circle cx="32" cy="32" r="24" fill="none" stroke="%23FFC300" stroke-width="4"/><text x="20" y="42" font-family="Inter,Arial" font-weight="800" font-size="28" fill="white">Z</text></svg>'>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="brand">
+        <!-- If you upload assets/zpt_logo.png it will show automatically -->
+        <img class="brand-logo" src="assets/zpt_logo.png" alt="Zero Peak Tech" onerror="this.style.display='none'">
+        <div>
+          <div class="brand-name">Zero Peak Tech</div>
+          <div class="brand-tag">Energy • Analytics • AI</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#solutions">Solutions</a>
+        <a href="#zero">ZERO AI</a>
+        <a href="#dashboards">Dashboards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div>
+        <h1>Meet <span class="accent">ZERO</span>: your AI for building performance & compliance</h1>
+        <p class="lede">We help owners and operators hit Building Performance Standards with data‑driven energy analytics, anomaly detection, and automated reporting. ZPT blends engineering rigor with practical automation to cut energy, carbon, and cost—without adding workload.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Book a discovery call</a>
+          <a class="btn secondary" href="#solutions">See how it works</a>
+        </div>
+        <p class="note">Trusted for EUI tracking, carbon reporting, incentive capture, and M&V.</p>
+      </div>
+      <div class="hero-art">
+        <!-- If you upload assets/zero_logo.png it will show; else the SVG orb renders -->
+        <img class="zero-logo" src="assets/zero_logo.png" alt="ZERO AI" onerror="this.style.display='none'">
+        <svg class="zero-orb" viewBox="0 0 300 300" aria-hidden="true">
+          <defs>
+            <radialGradient id="g" cx="50%" cy="50%">
+              <stop offset="0%" stop-color="#1fb6ff" stop-opacity=".35"/>
+              <stop offset="70%" stop-color="#0b1220"/>
+            </radialGradient>
+          </defs>
+          <circle cx="150" cy="150" r="140" fill="url(#g)" stroke="#1fb6ff88"/>
+          <circle cx="150" cy="150" r="95" fill="none" stroke="#FFC300" stroke-width="4"/>
+          <text x="120" y="175" fill="#1fb6ff" font-size="96" font-weight="900" font-family="Inter,Arial">Z</text>
+        </svg>
+      </div>
+    </section>
+
+    <section id="solutions" class="section">
+      <h2>Solutions</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="chip">Compliance</div>
+          <h3>Building Performance Standards</h3>
+          <p class="note">Colorado & Washington coverage, ENERGY STAR benchmarking, ordinance tracking, penalty risk forecasting.</p>
+          <ul class="list">
+            <li>ESPM data sync & QA</li>
+            <li>CO & WA BPS readiness</li>
+            <li>Automated compliance reports</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="chip">Analytics</div>
+          <h3>Energy Data Analyst GPT</h3>
+          <p class="note">Upload bills or interval data → detect anomalies, quantify savings, generate dashboards (Power BI ready).</p>
+          <ul class="list">
+            <li>EUI & carbon KPIs</li>
+            <li>Anomaly detection & alerts</li>
+            <li>Incentive & tax credit mapping</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="chip">Automation</div>
+          <h3>Operations & Reporting</h3>
+          <p class="note">Power Automate / n8n flows push tasks to Planner, draft proposals, and compile monthly reports.</p>
+          <ul class="list">
+            <li>Planner & Outlook integrations</li>
+            <li>Scheduled PDF reporting</li>
+            <li>Client portal roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboards" class="section">
+      <h2>Dashboards (Power BI‑style mockups)</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Key Metrics & Trends</h3>
+          <!-- Inline SVG mockups so no image files needed -->
+          <div class="thumb kpis">
+            <svg viewBox="0 0 800 220">
+              <rect x="10" y="10" width="185" height="200" rx="12" class="panel"/>
+              <text x="28" y="52" class="kpi-title">EUI</text>
+              <text x="28" y="85" class="kpi-value">68 kBtu/ft²</text>
+              <text x="28" y="110" class="kpi-note">Target: 55</text>
+
+              <rect x="205" y="10" width="185" height="200" rx="12" class="panel"/>
+              <text x="223" y="52" class="kpi-title">CO₂e</text>
+              <text x="223" y="85" class="kpi-value">420 MT (↓12%)</text>
+
+              <rect x="400" y="10" width="185" height="200" rx="12" class="panel"/>
+              <text x="418" y="52" class="kpi-title">Cost</text>
+              <text x="418" y="85" class="kpi-value">$12,400 (↑5%)</text>
+
+              <rect x="595" y="10" width="185" height="200" rx="12" class="panel"/>
+              <text x="613" y="52" class="kpi-title">Peak kW</text>
+              <text x="613" y="85" class="kpi-value">850 (LF 0.72)</text>
+            </svg>
+          </div>
+
+          <div class="thumb" style="margin-top:12px">
+            <svg viewBox="0 0 800 320">
+              <defs>
+                <linearGradient id="bar" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#1a7dbf"/>
+                  <stop offset="100%" stop-color="#005f99"/>
+                </linearGradient>
+              </defs>
+              <rect x="60" y="30" width="700" height="240" class="panel"/>
+              <g fill="url(#bar)">
+                <rect x="80"  y="140" width="28" height="130"/>
+                <rect x="140" y="120" width="28" height="150"/>
+                <rect x="200" y="100" width="28" height="170"/>
+                <rect x="260" y="130" width="28" height="140"/>
+                <rect x="320" y="110" width="28" height="160"/>
+                <rect x="380" y="95"  width="28" height="175"/>
+                <rect x="440" y="125" width="28" height="145"/>
+                <rect x="500" y="135" width="28" height="135"/>
+                <rect x="560" y="150" width="28" height="120"/>
+                <rect x="620" y="130" width="28" height="140"/>
+                <rect x="680" y="100" width="28" height="170"/>
+                <rect x="740" y="115" width="28" height="155"/>
+              </g>
+              <polyline fill="none" stroke="#FFC300" stroke-width="3" points="80,210 140,180 200,160 260,175 320,170 380,150 440,185 500,195 560,205 620,190 680,165 740,180" />
+              <text x="65" y="20" class="caption">Energy (kWh) bars, Cost ($) line</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Alerts & ROI</h3>
+          <div class="thumb">
+            <svg viewBox="0 0 800 220">
+              <text x="24" y="60"  class="alert-red">● High Consumption</text>
+              <text x="48" y="85"  class="muted">↑ 15% above average</text>
+              <text x="24" y="120" class="alert-amber">● Cost Spike</text>
+              <text x="48" y="145" class="muted">Unexpected $1,500 increase</text>
+              <text x="24" y="180" class="alert-green">● Compliance Ready</text>
+            </svg>
+          </div>
+
+          <div class="thumb" style="margin-top:12px">
+            <svg viewBox="0 0 800 320">
+              <polyline fill="none" stroke="#9bb3d6" stroke-dasharray="6 6" stroke-width="3" points="60,260 140,250 220,245 300,240 380,238 460,235 540,232 620,230 700,228"/>
+              <polyline fill="none" stroke="#005f99" stroke-width="3" points="60,250 140,235 220,225 300,210 380,200 460,190 540,185 620,178 700,170"/>
+              <polygon points="60,250 140,235 220,225 300,210 380,200 460,190 540,185 620,178 700,170 700,228 60,260" fill="#1fb6ff" opacity="0.2"/>
+              <text x="60" y="30" class="caption">Baseline vs Retrofits — shaded = savings</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="note">These inline SVG mockups are lightweight. We’ll swap for live Power BI embeds later.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid-2">
+        <div class="card">
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <label>Name <input name="name" placeholder="Your name" required /></label>
+            <label>Email <input name="email" type="email" placeholder="you@company.com" required /></label>
+            <label>Message <textarea name="message" rows="5" placeholder="How can we help?"></textarea></label>
+            <button class="btn" type="submit">Send</button>
+            <p class="note">Form uses Formspree placeholder—replace with your endpoint.</p>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Quick Links</h3>
+          <ul class="list">
+            <li><a href="mailto:info@zeropeaktech.com">info@zeropeaktech.com</a></li>
+            <li><a href="#" aria-disabled="true">LinkedIn (add link)</a></li>
+            <li><a href="#" aria-disabled="true">Privacy & Terms</a></li>
+          </ul>
+          <p class="note">© <span id="y"></span> Zero Peak Tech, LLC</p>
+          <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">Built by Zero Peak Tech — engineered efficiency, practical automation.</footer>
+  </div>
+</body>
+</html>
