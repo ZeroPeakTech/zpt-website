@@ -1,0 +1,9 @@
+zpt-website/
+├─ index.html
+├─ style.css
+├─ README.md
+├─ _redirects
+├─ .gitignore
+└─ assets/
+   ├─ zpt_logo.png         ← (optional) drop in your logo later
+   └─ zero_logo.png        ← (optional) drop in ZERO logo later
