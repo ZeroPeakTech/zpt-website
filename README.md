@@ -20,4 +20,3 @@ Static, fast, Netlify-hosted site for ZPT — energy analytics, compliance autom
 - Replace SVG mockups with live Power BI embeds.
 - Add /deck and /privacy pages.
 - Connect contact form to Formspree or Azure Function.
-
