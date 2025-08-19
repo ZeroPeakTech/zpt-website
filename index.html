@@ -176,13 +176,27 @@
       <h2>Contact</h2>
       <div class="grid-2">
         <div class="card">
-          <form action="https://formspree.io/f/your-id" method="POST">
-            <label>Name <input name="name" placeholder="Your name" required /></label>
-            <label>Email <input name="email" type="email" placeholder="you@company.com" required /></label>
-            <label>Message <textarea name="message" rows="5" placeholder="How can we help?"></textarea></label>
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="application/x-www-form-urlencoded" action="/thanks.html">
+            <!-- Netlify needs these hidden fields -->
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none">
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+          
+            <label>Name
+              <input name="name" placeholder="Your name" required />
+            </label>
+            <label>Email
+              <input name="email" type="email" placeholder="you@company.com" required />
+            </label>
+            <label>Message
+              <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
+            </label>
+          
             <button class="btn" type="submit">Send</button>
-            <p class="note">Form uses Formspree placeholder—replace with your endpoint.</p>
+            <p class="note">We’ll get back to you within 1 business day.</p>
           </form>
+
         </div>
         <div class="card">
           <h3>Quick Links</h3>
