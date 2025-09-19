@@ -66,3 +66,43 @@ form input:focus, form textarea:focus{
   outline-offset: 2px;
   border-color: transparent;
 }
+/* ===== ZPT add-ons (place at END of style.css) ===== */
+
+/* Show PNG, hide SVG fallback when image loads */
+.hero-art .zero-orb { display: block; }
+.hero-art.has-img .zero-orb { display: none; }
+.hero-art { display: grid; place-items: center; }
+
+/* Hero buttons */
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  background: #1fb8ff;
+  color: #001524;
+  padding: .8rem 1.05rem;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn.secondary {
+  background: #0e2236;
+  color: #e6f7ff;
+  border: 1px solid #20384f;
+}
+
+/* Two-column sections (dashboards, contact) */
+.grid-2 { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 800px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Form styling */
+.section label { display: flex; flex-direction: column; gap: 6px; font-size: .9rem; }
+.section input, .section textarea {
+  background: #0e2236;
+  border: 1px solid #20384f;
+  color: #e6f7ff;
+  border-radius: 10px;
+  padding: .7rem .9rem;
+}
+.form-row { margin-top: .5rem; }
