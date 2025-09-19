@@ -8,6 +8,105 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23005f99"/><circle cx="32" cy="32" r="24" fill="none" stroke="%23FFC300" stroke-width="4"/><text x="20" y="42" font-family="Inter,Arial" font-weight="800" font-size="28" fill="white">Z</text></svg>'>
   <link rel="stylesheet" href="style.css" />
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7BK53TYVCY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7BK53TYVCY');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "tcotlivykn");
+</script>
+
+<!-- JSON-LD: Organization -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://www.zeropeaktech.com/#org",
+  "name":"Zero Peak Tech (ZPT)",
+  "url":"https://www.zeropeaktech.com/",
+  "logo":"https://www.zeropeaktech.com/assets/zpt_logo.png",
+  "foundingDate":"2025-06-23",
+  "slogan":"Energy • Analytics • AI",
+  "description":"B2B energy-tech firm providing building performance standards compliance, AI-driven analytics, anomaly detection, reporting automation, and dashboards.",
+  "brand":{
+    "@type":"Brand",
+    "name":"ZERO — AI Energy Assistant",
+    "logo":"https://www.zeropeaktech.com/assets/zero_logo.png"
+  },
+  "areaServed":[
+    {"@type":"Country","name":"United States"},
+    {"@type":"State","name":"Colorado"},
+    {"@type":"State","name":"Washington"},
+    {"@type":"State","name":"California"}
+  ],
+  "sameAs":[ "https://www.linkedin.com/company/zeropeaktech" ]
+}
+</script>
+
+<!-- JSON-LD: Services -->
+<script type="application/ld+json">
+{ "@context":"https://schema.org", "@type":"Service",
+  "@id":"https://www.zeropeaktech.com/#bps-compliance",
+  "serviceType":"Building Performance Standards Compliance",
+  "provider":{"@id":"https://www.zeropeaktech.com/#org"},
+  "areaServed":"US",
+  "description":"ESPM data sync & QA, EUI tracking, CO & WA BPS readiness, automated compliance reports."
+}
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org", "@type":"Service",
+  "@id":"https://www.zeropeaktech.com/#eda-gpt",
+  "serviceType":"Energy Data Analyst GPT",
+  "provider":{"@id":"https://www.zeropeaktech.com/#org"},
+  "areaServed":"US",
+  "description":"Upload utility bills & interval data to detect anomalies, quantify savings, and generate KPI dashboards."
+}
+</script>
+<script type="application/ld+json">
+{ "@context":"https://schema.org", "@type":"Service",
+  "@id":"https://www.zeropeaktech.com/#ops-reporting",
+  "serviceType":"Operations & Reporting Automation",
+  "provider":{"@id":"https://www.zeropeaktech.com/#org"},
+  "areaServed":"US",
+  "description":"Planner/Outlook integrations, scheduled PDF reporting, client portal roadmap."
+}
+</script>
+
+<!-- JSON-LD: ContactPoint -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "@id":"https://www.zeropeaktech.com/#org",
+  "contactPoint":[
+    {"@type":"ContactPoint","contactType":"sales","email":"sales@zeropeaktech.com","areaServed":"US","availableLanguage":["en"]},
+    {"@type":"ContactPoint","contactType":"support","email":"support@zeropeaktech.com","areaServed":"US","availableLanguage":["en"]}
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What does Zero Peak Tech do?","acceptedAnswer":{"@type":"Answer","text":"We help building owners and operators meet Building Performance Standards with AI-driven energy analytics, anomaly detection, and automated reporting."}},
+    {"@type":"Question","name":"Who is ZERO?","acceptedAnswer":{"@type":"Answer","text":"ZERO is our AI energy assistant that processes utility data, flags issues, estimates savings, and generates dashboards and reports."}},
+    {"@type":"Question","name":"Which regions do you serve?","acceptedAnswer":{"@type":"Answer","text":"We currently serve the United States, with focus on Colorado, Washington, and California."}},
+    {"@type":"Question","name":"Do you integrate with Microsoft 365?","acceptedAnswer":{"@type":"Answer","text":"Yes. We integrate with Planner, Outlook, and Power Automate to schedule tasks and deliver reports."}},
+    {"@type":"Question","name":"Can you handle ENERGY STAR Portfolio Manager data?","acceptedAnswer":{"@type":"Answer","text":"Yes. We support ESPM data sync, quality assurance, and compliance-ready exports."}}
+  ]
+}
+</script>
 </head>
 <body>
   <div class="wrap">
@@ -39,8 +138,10 @@
         <p class="note">Trusted for EUI tracking, carbon reporting, incentive capture, and M&V.</p>
       </div>
       <div class="hero-art">
-        <!-- If you upload assets/zero_logo.png it will show; else the SVG orb renders -->
-        <img class="zero-logo" src="assets/zero_logo.png" alt="ZERO AI" onerror="this.style.display='none'">
+        <img class="zero-logo" src="assets/zero_logo.png" alt="ZERO AI"
+            onload="this.closest('.hero-art').classList.add('has-img')"
+            onerror="this.style.display='none'">
+        <!-- SVG fallback only shows if the PNG FAILS to load -->
         <svg class="zero-orb" viewBox="0 0 300 300" aria-hidden="true">
           <defs>
             <radialGradient id="g" cx="50%" cy="50%">
@@ -53,6 +154,7 @@
           <text x="120" y="175" fill="#1fb6ff" font-size="96" font-weight="900" font-family="Inter,Arial">Z</text>
         </svg>
       </div>
+
     </section>
 
     <section id="solutions" class="section">
@@ -61,7 +163,7 @@
         <div class="card">
           <div class="chip">Compliance</div>
           <h3>Building Performance Standards</h3>
-          <p class="note">Colorado & Washington coverage, ENERGY STAR benchmarking, ordinance tracking, penalty risk forecasting.</p>
+          <p class="note">Colorado, California, & Washington coverage, ENERGY STAR benchmarking, ordinance tracking, penalty risk forecasting.</p>
           <ul class="list">
             <li>ESPM data sync & QA</li>
             <li>CO & WA BPS readiness</li>
