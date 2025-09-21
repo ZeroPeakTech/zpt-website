@@ -19,14 +19,13 @@ jobs:
           npx -y htmlhint "**/*.html" || true
           npx -y stylelint "**/*.css" || true
 
-  # Compute the URL we'll test: Deploy Preview on PRs, fallback to PREVIEW_URL secret on pushes.
-    compute_preview_url:
+  compute_preview_url:
     runs-on: ubuntu-latest
     outputs:
-      url: ${{ steps.out.outputs.url }}
+      url: ${{ steps.seturl.outputs.url }}
     steps:
       - name: Determine preview URL
-        id: out
+        id: seturl
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -40,12 +39,10 @@ jobs:
     needs: [lint_build, compute_preview_url]
     steps:
       - uses: actions/checkout@v4
-
       - name: Show preview URL
         run: echo "Preview URL -> $URL"
         env:
           URL: ${{ needs.compute_preview_url.outputs.url }}
-
       - name: Fail early if URL is empty
         run: |
           if [ -z "${URL}" ]; then
@@ -53,10 +50,8 @@ jobs:
           fi
         env:
           URL: ${{ needs.compute_preview_url.outputs.url }}
-
       - name: Install LHCI
         run: npm i -g @lhci/cli@0.13.x
-
       - name: Run Lighthouse via LHCI
         env:
           LHCI_COLLECT__URL: ${{ needs.compute_preview_url.outputs.url }}
@@ -68,12 +63,12 @@ jobs:
     needs: [lint_build, compute_preview_url]
     steps:
       - uses: actions/checkout@v4
-
       - name: Show preview URL
         run: echo "Preview URL -> $URL"
         env:
           URL: ${{ needs.compute_preview_url.outputs.url }}
-
+      - name: Install Pa11y
+        run: npm i -g pa11y
       - name: Run Pa11y on Preview
         run: pa11y "$URL" --reporter cli || true
         env:
