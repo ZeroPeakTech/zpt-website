@@ -1,0 +1,40 @@
+name: ZPT CI
+on:
+  pull_request:
+    branches: [ master, main ]
+  push:
+    branches: [ master, main ]
+
+jobs:
+  lint_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: HTML/CSS lint (basic)
+        run: |
+          npx -y htmlhint "**/*.html" || true
+          npx -y stylelint "**/*.css" || true
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    needs: lint_build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install LHCI
+        run: npm i -g @lhci/cli@0.13.x
+      - name: Run Lighthouse on Deploy Preview
+        env: { PREVIEW_URL: ${{ secrets.PREVIEW_URL }} }
+        run: lhci autorun --collect.url="$PREVIEW_URL" --upload.target=temporary-public-storage
+
+  accessibility:
+    runs-on: ubuntu-latest
+    needs: lint_build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pa11y
+        run: npm i -g pa11y
+      - name: Pa11y on Deploy Preview
+        env: { PREVIEW_URL: ${{ secrets.PREVIEW_URL }} }
+        run: pa11y "$PREVIEW_URL" --reporter cli || true
